@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+*.log
+.env
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build outputs
+frontend/dist/
+backend/logs/

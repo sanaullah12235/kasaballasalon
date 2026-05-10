@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0A0A0A;
+    color: #ffffff;
+    overflow-x: hidden;
+    font-weight: 300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.1em;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D4A532;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #AA8428;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold-500 hover:bg-gold-600 text-dark-400 font-medium px-8 py-3 rounded-full transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-gold-500/30 uppercase tracking-widest text-sm;
+  }
+
+  .btn-secondary {
+    @apply border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-dark-400 font-medium px-8 py-3 rounded-full transition-all duration-500 uppercase tracking-widest text-sm;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-7xl font-bold text-center mb-6 uppercase;
+  }
+
+  .section-subtitle {
+    @apply text-gold-500 text-center text-sm md:text-base mb-16 font-light uppercase tracking-[0.3em];
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold-300 to-gold-600 bg-clip-text text-transparent;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(212, 165, 50, 0.2);
+  }
+
+  .glow-gold-hover:hover {
+    box-shadow: 0 0 30px rgba(212, 165, 50, 0.4);
+  }
+}
